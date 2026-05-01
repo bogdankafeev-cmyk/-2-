@@ -162,25 +162,7 @@ const todayNameEl=document.getElementById("todayName"),toastEl=document.getEleme
     }, 1000);
   };
 
-  window.creatorCloseAd = function(){
-    const overlay = document.getElementById("creatorAdOverlay");
-    if(overlay) overlay.classList.remove("show");
-  };
 
-  window.creatorToggleAds = function(){
-    const off = localStorage.getItem("creatorAdsOff")==="1";
-    localStorage.setItem("creatorAdsOff", off ? "0" : "1");
-    alert(off ? "Реклама включена" : "Реклама отключена");
-  };
-
-  window.creatorCloseSecret = function(){
-    const overlay = document.getElementById("creatorSecretOverlay");
-    if(overlay) overlay.classList.remove("show");
-  };
-
-  function openSecret(){
-    const overlay = document.getElementById("creatorSecretOverlay");
-    if(overlay) overlay.classList.add("show");
   }
 
   document.addEventListener("click", function(e){
