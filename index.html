@@ -3,14 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
-<title>АСОШ №2 — Full</title>
+<title>АСОШ №2 — v6.2</title>
 <style>
 :root{--b1:#8fe0ff;--b2:#4baefa;--b3:#2867df;--card:rgba(255,255,255,.25);--line:rgba(255,255,255,.38);--muted:rgba(255,255,255,.75);--ink:#173963;--txt:#fff;--sh:0 18px 44px rgba(0,58,122,.22)}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--txt);min-height:100vh;background:radial-gradient(circle at 10% 0%,rgba(255,255,255,.36),transparent 22%),linear-gradient(160deg,var(--b1),var(--b2),var(--b3));background-attachment:fixed}body.dark{--b1:#071629;--b2:#102b56;--b3:#050b16;--card:rgba(255,255,255,.12);--line:rgba(255,255,255,.2)}body.low .card,body.low .btn,body.low .nav{box-shadow:none;backdrop-filter:none}.app{max-width:880px;margin:auto;padding:14px 12px 105px}.screen{display:none;animation:show .22s ease}.screen.active{display:block}@keyframes show{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}.top{font-size:28px;font-weight:900;display:flex;justify-content:space-between;padding:8px}.card{background:linear-gradient(180deg,var(--card),rgba(255,255,255,.12));border:1px solid var(--line);border-radius:28px;padding:18px;margin:12px 0;box-shadow:var(--sh);backdrop-filter:blur(18px)}h1,h2,p{margin-top:0}h1{font-size:31px}h2{font-size:25px}.muted{color:var(--muted);line-height:1.45}.clock{width:132px;height:132px;border-radius:50%;margin:auto;display:grid;place-items:center;background:conic-gradient(#fff var(--angle),rgba(255,255,255,.25) 0);box-shadow:inset 0 0 0 5px rgba(255,255,255,.17),var(--sh)}.inner{width:102px;height:102px;border-radius:50%;background:rgba(255,255,255,.86);color:var(--ink);display:grid;place-items:center;text-align:center;font-weight:900}.big{font-size:28px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.gradeGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.choice,.classBtn{border:0;border-radius:22px;padding:17px;font-size:20px;font-weight:900;color:var(--ink);background:rgba(255,255,255,.75)}.choice.active{outline:4px solid rgba(255,255,255,.45);background:white}.btn{border:0;border-radius:23px;padding:16px;font-size:18px;font-weight:900;color:white;background:linear-gradient(135deg,#55c8ff,#3263ee);margin:6px 0;width:100%;text-align:left;box-shadow:var(--sh)}.green{background:linear-gradient(135deg,#79df61,#35ad44)}.orange{background:linear-gradient(135deg,#ff9a44,#f36a21)}.purple{background:linear-gradient(135deg,#c573ff,#7338e8)}.darkBtn{background:rgba(13,43,84,.55);border:1px solid var(--line)}.lesson{display:grid;grid-template-columns:48px 1fr;gap:10px;padding:12px;margin:8px 0;border-radius:20px;background:rgba(255,255,255,.18);border:1px solid var(--line)}.lesson.current{background:rgba(255,255,255,.42);border-color:#fff}.num{width:44px;height:44px;border-radius:15px;background:linear-gradient(135deg,#66d0ff,#3263ee);display:grid;place-items:center;font-weight:900}.meta{color:var(--muted);font-size:14px}input,select,textarea{width:100%;border:0;border-radius:17px;padding:13px;font-size:16px;color:var(--ink)}label{font-weight:900;color:var(--muted);display:block;margin:10px 0 5px}textarea{min-height:86px}.nav{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);width:min(850px,calc(100% - 20px));display:none;grid-template-columns:repeat(5,1fr);gap:5px;background:rgba(255,255,255,.78);border-radius:26px;padding:8px;z-index:20;box-shadow:var(--sh)}.nav.active{display:grid}.nav button{border:0;background:transparent;color:#4a6a91;font-size:11px;font-weight:900;border-radius:17px;padding:7px 1px}.nav button.active{background:rgba(47,140,255,.2);color:#168bff}.nav span{display:block;font-size:22px}.toast{position:fixed;top:18px;left:50%;transform:translateX(-50%) translateY(-120px);background:rgba(0,38,82,.9);padding:13px 18px;border-radius:18px;z-index:80;transition:.25s;font-weight:900}.toast.show{transform:translateX(-50%) translateY(0)}.adOverlay{position:fixed;inset:0;background:rgba(2,8,20,.78);z-index:60;display:none;align-items:center;justify-content:center;padding:18px;backdrop-filter:blur(14px)}.adOverlay.show{display:flex}.adCard{width:min(430px,100%);border-radius:30px;padding:24px;background:linear-gradient(160deg,#07182f,#1458bb 58%,#69d7ff);color:white;border:1px solid rgba(255,255,255,.45);box-shadow:0 30px 80px rgba(0,0,0,.42);position:relative}.adTitle{font-size:31px;font-weight:900;line-height:1.05;margin-bottom:12px}.adClose{display:none;position:absolute;right:14px;top:14px;width:42px;height:42px;border-radius:50%;border:0;background:white;color:#123;font-size:24px;font-weight:900}.adClose.show{display:block}.badge{display:inline-block;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.18);border:1px solid var(--line);font-weight:900;margin:4px}@media(max-width:560px){.grid,.gradeGrid{grid-template-columns:1fr}h1{font-size:29px}}
 </style>
+
+<style id="v6StylePatch">
+body.theme-light{--b1:#eff9ff;--b2:#b9e7ff;--b3:#70bdf5;--card:rgba(255,255,255,.62);--line:rgba(30,80,140,.18);--muted:rgba(20,55,95,.75);--ink:#10345d;--txt:#123}
+body.theme-dark{--b1:#071629;--b2:#102b56;--b3:#050b16;--card:rgba(255,255,255,.12);--line:rgba(255,255,255,.2);--muted:rgba(255,255,255,.70);--ink:#dff4ff;--txt:#fff}
+body.theme-ps{--b1:#031026;--b2:#063b9a;--b3:#2d8cff;--card:rgba(255,255,255,.16);--line:rgba(130,200,255,.35);--muted:rgba(230,246,255,.76);--ink:#eaf8ff;--txt:#fff}
+body.theme-neon{--b1:#14001f;--b2:#301060;--b3:#7f2bff;--card:rgba(255,255,255,.14);--line:rgba(230,160,255,.40);--muted:rgba(255,230,255,.76);--ink:#fff;--txt:#fff}
+body.theme-save{--b1:#101820;--b2:#152422;--b3:#0a0f0c;--card:rgba(255,255,255,.09);--line:rgba(255,255,255,.16);--muted:rgba(255,255,255,.62);--ink:#dfffe8;--txt:#fff}
+body.compact .app{max-width:430px;padding-left:10px;padding-right:10px}
+body.compact .card{border-radius:20px;padding:14px;margin:9px 0}
+body.compact h1{font-size:25px;line-height:1.12}
+body.compact h2{font-size:21px}
+body.compact .btn{padding:13px 14px;border-radius:18px;font-size:16px;margin:5px 0}
+body.compact .lesson{border-radius:17px;padding:10px;grid-template-columns:42px 1fr}
+body.compact .num{width:38px;height:38px;border-radius:13px;font-size:16px}
+body.compact .nav{width:min(430px,calc(100% - 18px));border-radius:22px;padding:6px}
+body.compact .nav button{font-size:10px;padding:6px 0}
+body.compact .nav span{font-size:20px}
+body.compact .top{font-size:22px}
+body.compact .clock{width:108px;height:108px}
+body.compact .inner{width:82px;height:82px}
+body.compact .big{font-size:23px}
+.themeButtons{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:8px}
+.themeBtn{border:0;border-radius:18px;padding:13px;font-weight:900;color:white;background:linear-gradient(135deg,#55c8ff,#3263ee)}
+.themeBtn.light{background:linear-gradient(135deg,#ffffff,#b9e7ff);color:#173963}
+.themeBtn.dark{background:linear-gradient(135deg,#0b1528,#213e75)}
+.themeBtn.ps{background:linear-gradient(135deg,#003bff,#52c7ff)}
+.themeBtn.neon{background:linear-gradient(135deg,#7b2cff,#ff55d4)}
+.themeBtn.save{background:linear-gradient(135deg,#11281e,#3b7a53)}
+.v6Info{padding:12px;border-radius:18px;background:rgba(255,255,255,.14);border:1px solid var(--line);margin:8px 0}
+#v6Toast{position:fixed;left:50%;top:18px;transform:translateX(-50%) translateY(-120px);z-index:100001;background:rgba(0,35,80,.92);color:#fff;border-radius:18px;padding:12px 16px;font-weight:900;transition:.25s;text-align:center}
+#v6Toast.show{transform:translateX(-50%) translateY(0)}
+@media(max-width:560px){body:not(.compact) .app{max-width:440px}body:not(.compact) .card{padding:15px;border-radius:22px}body:not(.compact) .btn{font-size:16px;padding:14px;border-radius:18px}body:not(.compact) h1{font-size:27px}body:not(.compact) h2{font-size:22px}}
+</style>
+
+
+<style id="v62StylePatch">
+.v62Chip{
+  display:inline-block;
+  padding:7px 11px;
+  margin:4px 4px 4px 0;
+  border-radius:999px;
+  background:rgba(255,255,255,.18);
+  border:1px solid var(--line);
+  font-weight:900;
+}
+.v62Pulse{
+  animation:v62pulse 1.6s infinite;
+}
+@keyframes v62pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.03)}
+  100%{transform:scale(1)}
+}
+.v62MiniPanel{
+  padding:12px;
+  border-radius:18px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.14);
+  margin:8px 0;
+}
+.v62Warn{
+  border-left:5px solid #ffcf45;
+}
+</style>
+
 </head><body>
 <div class="toast" id="toast">Готово</div>
-<div class="adOverlay" id="ad"><div class="adCard"><button class="adClose" id="adClose" onclick="closeAd()">×</button><div class="adTitle" id="adTitle">🚀 Обновление</div><p id="adText">Скоро новые функции.</p><div id="adTimer" class="badge">Закрыть через 10</div><div class="badge">Реклама творений включена всегда</div></div></div>
+<div class="adOverlay" id="ad"><div class="adCard"><button class="adClose" id="adClose" onclick="closeAd()">×</button><div class="adTitle" id="adTitle">🚀 Обновление</div><p id="adText">Скоро новые функции.</p><div id="adTimer" class="badge">Закрыть через 3</div><div class="badge">Реклама творений включена всегда</div></div></div>
 <div class="app">
 <div class="top"><div id="time">--:--</div><div>▮▮▮⌁ 🔋</div></div>
 
@@ -20,7 +85,7 @@
  <div class="card"><h2>Параллель</h2><div class="gradeGrid" id="gradeGrid"></div></div>
 </section>
 <section id="letters" class="screen"><div class="card"><h2 id="letterTitle">Выбери класс</h2><div class="grid" id="lettersGrid"></div><button class="btn darkBtn" onclick="show('select')">← Назад</button></div></section>
-<section id="main" class="screen"><div class="card"><h1 onclick="logoTap()" id="classTitle">Классный центр</h1><div class="badge" id="version">v5.0 Full</div><div class="badge" id="qualityBadge">качество: высокое</div><p class="muted" id="sub">—</p><div class="lesson"><div class="num">🧠</div><div><b>Умный день</b><div class="meta" id="smart">Анализирую...</div></div></div><p class="muted">⚠️ Где есть пометка <b>(не точно!)</b>, исправь через “Изменилось”.</p></div><div class="card"><h2>Меню</h2><div class="grid"><button class="btn" onclick="go('today')">⏱ Сейчас</button><button class="btn orange" onclick="go('tomorrow')">🔮 Завтра</button><button class="btn green" onclick="go('updates')">🛠 Изменилось</button><button class="btn purple" onclick="go('ads')">📢 Творения</button><button class="btn darkBtn" onclick="go('schedule')">📅 Расписание</button><button class="btn darkBtn" onclick="go('settings')">⚙️ Настройки</button></div></div></section>
+<section id="main" class="screen"><div class="card"><h1 onclick="logoTap()" id="classTitle">Классный центр</h1><div class="badge" id="version">v6.2 Timer Core</div><div class="v62MiniPanel v62Warn"><b>⚡ v6.2 Stability Timer</b><div class="meta">Новый умный отсчёт до уроков: 1 смена, 2 смена, 0 урок и ожидание.</div></div><div class="badge" id="qualityBadge">качество: высокое</div><p class="muted" id="sub">—</p><div class="lesson"><div class="num">🧠</div><div><b>Умный день</b><div class="meta" id="smart">Анализирую...</div></div></div><p class="muted">⚠️ Где есть пометка <b>(не точно!)</b>, исправь через “Изменилось”.</p></div><div class="card"><h2>Меню</h2><div class="grid"><button class="btn" onclick="go('today')">⏱ Сейчас</button><button class="btn orange" onclick="go('tomorrow')">🔮 Завтра</button><button class="btn green" onclick="go('updates')">🛠 Изменилось</button><button class="btn purple" onclick="go('ads')">📢 Творения</button><button class="btn darkBtn" onclick="go('schedule')">📅 Расписание</button><button class="btn darkBtn" onclick="go('settings')">⚙️ Настройки</button></div></div></section>
 <section id="today" class="screen"><div class="card"><h2>Сейчас</h2><p><b id="nowLesson">—</b></p><p class="muted" id="timerText">—</p></div></section>
 <section id="schedule" class="screen"><div class="card"><h2>Расписание</h2><select id="daySelect" onchange="renderSchedule()"></select><div id="scheduleList"></div></div></section>
 <section id="tomorrow" class="screen"><div class="card"><h2>Завтра</h2><div id="tomorrowList"></div></div></section>
@@ -28,8 +93,39 @@
 <section id="updates" class="screen"><div class="card"><h2>Изменилось расписание?</h2><label>День</label><select id="updDay"></select><label>Урок</label><select id="updNum"></select><label>Предмет</label><input id="updSub"><label>Кабинет</label><input id="updRoom"><button class="btn" onclick="addUpdate()">Сохранить</button><div id="updList"></div></div></section>
 <section id="ads" class="screen"><div class="card"><h2>📢 Творения</h2><div class="lesson"><div class="num">🎥</div><div><b>Twitch: какойта чел</b><div class="meta">Стримы, игры, проекты.</div></div></div><div class="lesson"><div class="num">🎵</div><div><b>Песни</b><div class="meta">Богдан Кафеев feat DJ Хэнк & Suno.</div></div></div><button class="btn purple" onclick="showAd(true)">Показать рекламу</button></div></section>
 <section id="profile" class="screen"><div class="card"><h2>Профиль</h2><label>Имя</label><input id="userName" onchange="localStorage.setItem('userName',this.value)"><p>Класс: <b id="profileClass">—</b></p><p>Смена: <b id="profileShift">—</b></p></div></section>
-<section id="settings" class="screen"><div class="card"><h2>⚙️ Настройки</h2><button class="btn darkBtn" onclick="toggleDark()">🌙 Тёмный режим</button><button class="btn darkBtn" onclick="setQuality('low')">⚡ Качество: низкое</button><button class="btn darkBtn" onclick="setQuality('high')">🔥 Качество: высокое</button><button class="btn darkBtn" onclick="toggleSound()">🔊 Звуки: <span id="soundState">вкл</span></button><button class="btn darkBtn" onclick="dev()">🧪 Разработчик</button><button class="btn darkBtn" onclick="localStorage.clear();location.reload()">🧹 Сброс</button><p class="muted">Пароль разработчика: 030323. Уведомления работают не на всех устройствах. Реклама каждые 5 минут.</p></div></section>
-<section id="dev" class="screen"><div class="card"><h1>🧪 Режим разработчика</h1><button class="btn purple" onclick="toast('Система стабильна ✅')">Проверить систему</button><button class="btn" onclick="showAd(true)">Тест рекламы</button></div></section>
+<section id="settings" class="screen"><div class="card"><h2>⚙️ Настройки</h2>
+
+<div class="v62MiniPanel">
+  <b>📝 Сообщить об ошибке</b>
+  <div class="meta">Скопируй шаблон и отправь в сообщество: класс, день, номер урока, что исправить.</div>
+  <button class="btn darkBtn" onclick="copyBugTemplate()">Скопировать шаблон</button>
+</div>
+
+
+<div class="v6Info">
+  <b>🎨 Темы</b>
+  <div class="themeButtons">
+    <button class="themeBtn light" onclick="setTheme('light')">☀️ Светлая</button>
+    <button class="themeBtn dark" onclick="setTheme('dark')">🌙 Тёмная</button>
+    <button class="themeBtn ps" onclick="setTheme('ps')">🎮 PlayStation</button>
+    <button class="themeBtn neon" onclick="setTheme('neon')">🟣 Неон</button>
+    <button class="themeBtn save" onclick="setTheme('save')">🔋 Эконом</button>
+    <button class="themeBtn" onclick="setTheme('auto')">🕕 Авто</button>
+  </div>
+</div>
+<div class="v6Info">
+  <b>📱 Интерфейс</b>
+  <button class="btn darkBtn" onclick="toggleCompact()">📱 Компактный режим: <span id="compactState">выкл</span></button>
+</div>
+<div class="v6Info">
+  <b>🔊 Звуки v6</b>
+  <button class="btn darkBtn" onclick="testSound('nav')">Тест нижнего меню</button>
+  <button class="btn darkBtn" onclick="testSound('settings')">Тест настроек</button>
+  <button class="btn darkBtn" onclick="testSound('ad')">Тест рекламы</button>
+</div>
+<button class="btn darkBtn" onclick="toggleDark()">🌙 Тёмный режим</button><button class="btn darkBtn" onclick="setQuality('low')">⚡ Качество: низкое</button><button class="btn darkBtn" onclick="setQuality('high')">🔥 Качество: высокое</button><button class="btn darkBtn" onclick="toggleSound()">🔊 Звуки: <span id="soundState">вкл</span></button><button class="btn darkBtn" onclick="changeClass()">🎓 Сменить класс</button>
+<button class="btn darkBtn" onclick="dev()">🧪 Разработчик</button><button class="btn darkBtn" onclick="localStorage.clear();location.reload()">🧹 Сброс</button><p class="muted">Пароль разработчика: 030323. Уведомления работают не на всех устройствах. Реклама каждые 5 минут.</p></div></section>
+<section id="dev" class="screen"><div class="card"><h1>🧪 Режим разработчика</h1><button class="btn purple" onclick="devTestSystem()">Проверить систему</button><button class="btn darkBtn" onclick="devResetUpdates()">Очистить изменения расписания</button><button class="btn darkBtn" onclick="testSound('settings')">Тест звука</button><button class="btn" onclick="showAd(true)">Тест рекламы</button></div></section>
 </div>
 <nav class="nav" id="nav"><button type="button" onclick="go('main')" class="active"><span>🏠</span>Главная</button><button type="button" onclick="go('today')"><span>⏱</span>Сейчас</button><button type="button" onclick="go('schedule')"><span>📅</span>Уроки</button><button type="button" onclick="go('homework')"><span>📘</span>ДЗ</button><button type="button" onclick="go('settings')"><span>⚙️</span>Настройки</button></nav>
 <script>
@@ -60,15 +156,177 @@ function setActiveNav(id){
 
 function show(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');nav.classList.toggle('active',id!=='select'&&id!=='letters')}function openMain(){show('main');setActiveNav('main');classTitle.textContent=cls+' | Классный центр';sub.textContent=shift+' смена';profileClass.textContent=cls;profileShift.textContent=shift+' смена';renderAll()}function go(id){if(!cls&&id!=='dev'){show('select');return}show(id);setActiveNav(id);renderAll()}
 function arr(k){return JSON.parse(localStorage.getItem(k)||'[]')}function saveArr(k,v){localStorage.setItem(k,JSON.stringify(v))}function getLessons(day){let a=JSON.parse(JSON.stringify((SCHEDULES[cls]||{})[day]||[]));arr('updates').filter(u=>u.cls===cls&&u.day===day).forEach(u=>a[u.num-1]=[u.sub,u.room]);return a}
-function currentInfo(day){let l=getLessons(day),b=bells(day).slice(0,l.length),m=new Date().getHours()*60+new Date().getMinutes();for(let i=0;i<b.length;i++){let s=toMin(b[i][0]),e=toMin(b[i][1]);if(m>=s&&m<=e)return{type:'lesson',i,remain:e-m,next:i+1};if(i<b.length-1&&m>e&&m<toMin(b[i+1][0]))return{type:'break',i,remain:toMin(b[i+1][0])-m,next:i+1}}return{type:'none',i:-1,remain:0,next:b.findIndex(x=>toMin(x[0])>m)}}
-function lname(l){return l?l[0]+(l[1]?' ('+l[1]+')':''):'—'}function renderToday(){if(!cls)return;let l=getLessons(today()),x=currentInfo(today());if(x.type==='lesson'){nowLesson.textContent=lname(l[x.i]);timerText.textContent='До конца: '+minText(x.remain)+'. Далее: '+lname(l[x.next])}else if(x.type==='break'){nowLesson.textContent='Перемена';timerText.textContent='До урока: '+minText(x.remain)+'. Далее: '+lname(l[x.next])}else{nowLesson.textContent='Уроков сейчас нет';timerText.textContent=l.length?'Уроки ещё не начались или закончились.':'Уроков нет.'}}
+function currentInfo(day){
+let l=getLessons(day),b=bells(day).slice(0,l.length),m=new Date().getHours()*60+new Date().getMinutes();
+
+// v6.2: умный отсчёт до начала уроков.
+// 1 смена: если первый урок в 8:00, отсчёт с 7:00. Если день фактически начинается с 8:45, отсчёт с 8:00.
+// 2 смена: если есть 0 урок в 13:00, отсчёт с 12:00. Если начало в 13:45, отсчёт с 13:00.
+let firstStart = b.length ? toMin(b[0][0]) : null;
+if(firstStart !== null && m < firstStart){
+  let countdownStart = null;
+  if(shift==='2'){
+    countdownStart = firstStart <= 13*60 ? 12*60 : 13*60;
+  }else{
+    countdownStart = firstStart <= 8*60 ? 7*60 : 8*60;
+  }
+  if(m >= countdownStart){
+    return {type:'before',i:-1,remain:firstStart-m,next:0,start:firstStart};
+  }
+}
+
+for(let i=0;i<b.length;i++){
+  let s=toMin(b[i][0]),e=toMin(b[i][1]);
+  if(m>=s&&m<=e)return{type:'lesson',i,remain:e-m,next:i+1};
+  if(i<b.length-1&&m>e&&m<toMin(b[i+1][0]))return{type:'break',i,remain:toMin(b[i+1][0])-m,next:i+1};
+}
+return{type:'none',i:-1,remain:0,next:b.findIndex(x=>toMin(x[0])>m)}
+}
+function lname(l){return l?l[0]+(l[1]?' ('+l[1]+')':''):'—'}function renderToday(){if(!cls)return;let l=getLessons(today()),x=currentInfo(today());if(x.type==='before'){nowLesson.textContent='Ожидание начала уроков';timerText.textContent='До начала: '+minText(x.remain)+'. Первый урок: '+lname(l[x.next]);}
+else if(x.type==='lesson'){nowLesson.textContent=lname(l[x.i]);timerText.textContent='До конца: '+minText(x.remain)+'. Далее: '+lname(l[x.next])}
+else if(x.type==='break'){nowLesson.textContent='Перемена';timerText.textContent='До урока: '+minText(x.remain)+'. Далее: '+lname(l[x.next])}
+else{nowLesson.textContent='Уроков сейчас нет';timerText.textContent=l.length?'Уроки ещё не начались или закончились.':'Уроков нет.'}}
 function renderSchedule(){let d=daySelect.value||today(),l=getLessons(d),b=bells(d),x=d===today()?currentInfo(d):{};scheduleList.innerHTML=l.length?l.map((a,i)=>`<div class="lesson ${x.type==='lesson'&&x.i===i?'current':''}"><div class="num">${i+1}</div><div><b>${a[0]}</b><div class="meta">${b[i]?b[i][0]+' – '+b[i][1]:'—'} • ${a[1]||'кабинет не указан'}</div></div></div>`).join(''):'<div class="lesson">Уроков нет.</div>'}
 function renderTomorrow(){let d=DAYS[(DAYS.indexOf(today())+1)%DAYS.length],l=getLessons(d),b=bells(d);tomorrowList.innerHTML='<h2>'+d+'</h2>'+(l.length?l.map((a,i)=>`<div class="lesson"><div class="num">${i+1}</div><div><b>${a[0]}</b><div class="meta">${b[i]?b[i][0]+' – '+b[i][1]:'—'} • ${a[1]||'—'}</div></div></div>`).join(''):'Уроков нет')}
 function addHomework(){let a=arr('hw');a.unshift({cls,sub:hwSub.value,text:hwText.value});saveArr('hw',a);hwSub.value='';hwText.value='';renderHomework()}function renderHomework(){let a=arr('hw').filter(x=>x.cls===cls);hwList.innerHTML=a.length?a.map(x=>`<div class="lesson"><div><b>${x.sub}</b><div class="meta">${x.text}</div></div></div>`).join(''):'Домашних заданий пока нет.'}
 function addUpdate(){let a=arr('updates');a.unshift({cls,day:updDay.value,num:+updNum.value,sub:updSub.value,room:updRoom.value});saveArr('updates',a);updSub.value='';updRoom.value='';renderUpdates();renderAll();toast('Изменение сохранено')}function renderUpdates(){let a=arr('updates').filter(x=>x.cls===cls);updList.innerHTML=a.length?a.map(x=>`<div class="lesson"><div><b>${x.day}, ${x.num} урок</b><div class="meta">${x.sub} ${x.room}</div></div></div>`).join(''):'Изменений пока нет.'}
 function smartDay(){if(!cls)return;let n=getLessons(today()).length;smart.textContent=n===0?'Сегодня уроков нет.':n<=4?'Сегодня '+n+' урока. Лёгкий день 😎':n<=6?'Сегодня '+n+' уроков. Нормальный рейд.':'Сегодня '+n+' уроков. Держись 🚀'}
-function showAd(manual=false){let a=ads[Math.floor(Math.random()*ads.length)];adTitle.textContent=a[0];adText.textContent=a[1];ad.classList.add('show');adClose.classList.remove('show');let left=10;adTimer.textContent='Закрыть через '+left;let tm=setInterval(()=>{left--;adTimer.textContent='Закрыть через '+left;if(left<=0){clearInterval(tm);adTimer.textContent='Можно закрыть';adClose.classList.add('show')}},1000)}function closeAd(){ad.classList.remove('show')}
+function showAd(manual=false){let a=ads[Math.floor(Math.random()*ads.length)];adTitle.textContent=a[0];adText.textContent=a[1];ad.classList.add('show');adClose.classList.remove('show');let left=3;adTimer.textContent='Закрыть через '+left;let tm=setInterval(()=>{left--;adTimer.textContent='Закрыть через '+left;if(left<=0){clearInterval(tm);adTimer.textContent='Можно закрыть';adClose.classList.add('show')}},1000)}function closeAd(){ad.classList.remove('show')}
 function toggleDark(){document.body.classList.toggle('dark');localStorage.setItem('darkManual',document.body.classList.contains('dark')?'on':'off')}function setQuality(q){document.body.classList.toggle('low',q==='low');localStorage.setItem('quality',q);qualityBadge.textContent='качество: '+(q==='low'?'низкое':'высокое')}function toggleSound(){let off=localStorage.getItem('soundOff')==='1';localStorage.setItem('soundOff',off?'0':'1');soundState.textContent=off?'вкл':'выкл'}function dev(){let p=prompt('Пароль разработчика');if(p==='030323')go('dev');else if(p!==null)toast('Неверный пароль')}function logoTap(){clicks++;if(clicks>=10){clicks=0;dev()}}
 function renderAll(){renderToday();renderSchedule();renderTomorrow();renderHomework();renderUpdates();smartDay();profileClass.textContent=cls||'—';profileShift.textContent=shift+' смена';soundState.textContent=localStorage.getItem('soundOff')==='1'?'выкл':'вкл'}
 renderStart();userName.value=localStorage.getItem('userName')||'';if(localStorage.getItem('quality')==='low')setQuality('low');if(cls)openMain();tick();setInterval(tick,30000);setTimeout(()=>showAd(false),8000);setInterval(()=>showAd(false),300000);
-</script></body></html>
+
+function changeClass(){
+  localStorage.removeItem('class');
+  show('select');
+}
+
+</script>
+<script id="v6ScriptPatch">
+(function(){
+  const THEME_KEY="asosh_theme_v6";
+  const COMPACT_KEY="asosh_compact_v6";
+  function v6Toast(text){
+    const box=document.getElementById("v6Toast");
+    if(!box){ alert(text); return; }
+    box.textContent=text;
+    box.classList.add("show");
+    setTimeout(function(){box.classList.remove("show")},1700);
+  }
+  window.v6Toast=v6Toast;
+  function applyTheme(theme){
+    document.body.classList.remove("theme-light","theme-dark","theme-ps","theme-neon","theme-save","dark");
+    if(theme==="auto"){
+      const h=new Date().getHours();
+      document.body.classList.add(h>=18?"theme-dark":"theme-light");
+    }else{
+      document.body.classList.add("theme-"+theme);
+    }
+  }
+  window.setTheme=function(theme){
+    localStorage.setItem(THEME_KEY,theme);
+    applyTheme(theme);
+    v6Toast("Тема: "+theme);
+    if(window.playV6Sound) window.playV6Sound("settings");
+  };
+  window.toggleCompact=function(){
+    const on=!document.body.classList.contains("compact");
+    document.body.classList.toggle("compact",on);
+    localStorage.setItem(COMPACT_KEY,on?"1":"0");
+    const s=document.getElementById("compactState");
+    if(s) s.textContent=on?"вкл":"выкл";
+    v6Toast(on?"Компактный режим включён":"Компактный режим выключен");
+    if(window.playV6Sound) window.playV6Sound("settings");
+  };
+  function initTheme(){
+    const saved=localStorage.getItem(THEME_KEY)||"auto";
+    applyTheme(saved);
+    if(localStorage.getItem(COMPACT_KEY)==="1"){
+      document.body.classList.add("compact");
+      const s=document.getElementById("compactState");
+      if(s) s.textContent="вкл";
+    }
+  }
+  let ctx=null;
+  function tone(freq,time,gain,start){
+    try{
+      ctx=ctx||new(window.AudioContext||window.webkitAudioContext)();
+      const o=ctx.createOscillator();
+      const g=ctx.createGain();
+      o.frequency.value=freq;
+      g.gain.value=gain||0.035;
+      o.connect(g); g.connect(ctx.destination);
+      o.start(ctx.currentTime+(start||0));
+      o.stop(ctx.currentTime+(start||0)+(time||0.06));
+    }catch(e){}
+  }
+  window.playV6Sound=function(type){
+    if(localStorage.getItem("soundOff")==="1") return;
+    if(type==="nav"){ tone(480,.045,.03,0); tone(680,.045,.025,.055); }
+    else if(type==="settings"){ tone(360,.06,.03,0); tone(520,.08,.025,.07); }
+    else if(type==="ad"){ tone(220,.08,.035,0); tone(440,.08,.03,.09); tone(880,.1,.025,.18); }
+    else if(type==="error"){ tone(180,.09,.035,0); tone(140,.12,.03,.1); }
+    else { tone(560,.055,.035,0); }
+  };
+  window.testSound=function(type){ window.playV6Sound(type); v6Toast("Звук: "+type); };
+  document.addEventListener("click",function(e){
+    const btn=e.target.closest("button");
+    if(!btn) return;
+    const nav=btn.closest(".nav");
+    if(nav) window.playV6Sound("nav");
+    else if((btn.textContent||"").includes("Настройки") || btn.closest("#settings")) window.playV6Sound("settings");
+  },true);
+  const oldShowAd=window.showAd;
+  if(typeof oldShowAd==="function"){
+    window.showAd=function(manual){ window.playV6Sound("ad"); return oldShowAd(manual); };
+  }
+  window.devResetUpdates=function(){
+    localStorage.removeItem("updates");
+    v6Toast("Изменения расписания очищены");
+    if(typeof renderAll==="function") renderAll();
+  };
+  window.devTestSystem=function(){
+    v6Toast("Система стабильна ✅");
+    window.playV6Sound("settings");
+  };
+  initTheme();
+  setInterval(function(){ if((localStorage.getItem(THEME_KEY)||"auto")==="auto") applyTheme("auto"); },60000);
+})();
+
+function changeClass(){
+  localStorage.removeItem('class');
+  show('select');
+}
+
+</script>
+
+
+<script id="v62ScriptPatch">
+(function(){
+  window.copyBugTemplate=function(){
+    const c = localStorage.getItem('class') || 'класс';
+    const text = 'Ошибка в расписании\nКласс: '+c+'\nДень: \nУрок №: \nЧто исправить: ';
+    if(navigator.clipboard){
+      navigator.clipboard.writeText(text).then(function(){
+        if(window.v6Toast) v6Toast('Шаблон скопирован');
+        else alert('Шаблон скопирован');
+      });
+    }else{
+      prompt('Скопируй шаблон:', text);
+    }
+  };
+
+  // Tiny helper: highlight current lesson card a little stronger after render.
+  const oldRenderSchedule = window.renderSchedule;
+  if(typeof oldRenderSchedule === 'function'){
+    window.renderSchedule = function(){
+      oldRenderSchedule();
+      document.querySelectorAll('.lesson.current').forEach(function(el){
+        el.classList.add('v62Pulse');
+      });
+    };
+  }
+})();
+</script>
+
+</body></html>
