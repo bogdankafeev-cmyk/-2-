@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
-<title>АСОШ №2 — v7.1</title>
+<title>АСОШ №2 — v8 Clean</title>
 <style>
 :root{--b1:#8fe0ff;--b2:#4baefa;--b3:#2867df;--card:rgba(255,255,255,.25);--line:rgba(255,255,255,.38);--muted:rgba(255,255,255,.75);--ink:#173963;--txt:#fff;--sh:0 18px 44px rgba(0,58,122,.22)}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--txt);min-height:100vh;background:radial-gradient(circle at 10% 0%,rgba(255,255,255,.36),transparent 22%),linear-gradient(160deg,var(--b1),var(--b2),var(--b3));background-attachment:fixed}body.dark{--b1:#071629;--b2:#102b56;--b3:#050b16;--card:rgba(255,255,255,.12);--line:rgba(255,255,255,.2)}body.low .card,body.low .btn,body.low .nav{box-shadow:none;backdrop-filter:none}.app{max-width:880px;margin:auto;padding:14px 12px 105px}.screen{display:none;animation:show .22s ease}.screen.active{display:block}@keyframes show{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}.top{font-size:28px;font-weight:900;display:flex;justify-content:space-between;padding:8px}.card{background:linear-gradient(180deg,var(--card),rgba(255,255,255,.12));border:1px solid var(--line);border-radius:28px;padding:18px;margin:12px 0;box-shadow:var(--sh);backdrop-filter:blur(18px)}h1,h2,p{margin-top:0}h1{font-size:31px}h2{font-size:25px}.muted{color:var(--muted);line-height:1.45}.clock{width:132px;height:132px;border-radius:50%;margin:auto;display:grid;place-items:center;background:conic-gradient(#fff var(--angle),rgba(255,255,255,.25) 0);box-shadow:inset 0 0 0 5px rgba(255,255,255,.17),var(--sh)}.inner{width:102px;height:102px;border-radius:50%;background:rgba(255,255,255,.86);color:var(--ink);display:grid;place-items:center;text-align:center;font-weight:900}.big{font-size:28px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.gradeGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.choice,.classBtn{border:0;border-radius:22px;padding:17px;font-size:20px;font-weight:900;color:var(--ink);background:rgba(255,255,255,.75)}.choice.active{outline:4px solid rgba(255,255,255,.45);background:white}.btn{border:0;border-radius:23px;padding:16px;font-size:18px;font-weight:900;color:white;background:linear-gradient(135deg,#55c8ff,#3263ee);margin:6px 0;width:100%;text-align:left;box-shadow:var(--sh)}.green{background:linear-gradient(135deg,#79df61,#35ad44)}.orange{background:linear-gradient(135deg,#ff9a44,#f36a21)}.purple{background:linear-gradient(135deg,#c573ff,#7338e8)}.darkBtn{background:rgba(13,43,84,.55);border:1px solid var(--line)}.lesson{display:grid;grid-template-columns:48px 1fr;gap:10px;padding:12px;margin:8px 0;border-radius:20px;background:rgba(255,255,255,.18);border:1px solid var(--line)}.lesson.current{background:rgba(255,255,255,.42);border-color:#fff}.num{width:44px;height:44px;border-radius:15px;background:linear-gradient(135deg,#66d0ff,#3263ee);display:grid;place-items:center;font-weight:900}.meta{color:var(--muted);font-size:14px}input,select,textarea{width:100%;border:0;border-radius:17px;padding:13px;font-size:16px;color:var(--ink)}label{font-weight:900;color:var(--muted);display:block;margin:10px 0 5px}textarea{min-height:86px}.nav{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);width:min(850px,calc(100% - 20px));display:none;grid-template-columns:repeat(5,1fr);gap:5px;background:rgba(255,255,255,.78);border-radius:26px;padding:8px;z-index:20;box-shadow:var(--sh)}.nav.active{display:grid}.nav button{border:0;background:transparent;color:#4a6a91;font-size:11px;font-weight:900;border-radius:17px;padding:7px 1px}.nav button.active{background:rgba(47,140,255,.2);color:#168bff}.nav span{display:block;font-size:22px}.toast{position:fixed;top:18px;left:50%;transform:translateX(-50%) translateY(-120px);background:rgba(0,38,82,.9);padding:13px 18px;border-radius:18px;z-index:80;transition:.25s;font-weight:900}.toast.show{transform:translateX(-50%) translateY(0)}.adOverlay{position:fixed;inset:0;background:rgba(2,8,20,.78);z-index:60;display:none;align-items:center;justify-content:center;padding:18px;backdrop-filter:blur(14px)}.adOverlay.show{display:flex}.adCard{width:min(430px,100%);border-radius:30px;padding:24px;background:linear-gradient(160deg,#07182f,#1458bb 58%,#69d7ff);color:white;border:1px solid rgba(255,255,255,.45);box-shadow:0 30px 80px rgba(0,0,0,.42);position:relative}.adTitle{font-size:31px;font-weight:900;line-height:1.05;margin-bottom:12px}.adClose{display:none;position:absolute;right:14px;top:14px;width:42px;height:42px;border-radius:50%;border:0;background:white;color:#123;font-size:24px;font-weight:900}.adClose.show{display:block}.badge{display:inline-block;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.18);border:1px solid var(--line);font-weight:900;margin:4px}@media(max-width:560px){.grid,.gradeGrid{grid-template-columns:1fr}h1{font-size:29px}}
@@ -156,22 +156,27 @@ body.compact .big{font-size:23px}
 </style>
 
 
-<style id="v71FriendlyFixStyle">
-body.silentMode .nav,body.silentMode #creatorDock,body.silentMode .adOverlay,body.silentMode #ad,body.silentMode .demoPanel,body.silentMode .securityMini{display:none!important}
-body.silentMode .card{box-shadow:none!important}
-body.silentMode{filter:brightness(.94)}
-.silentExit{display:none;position:fixed;right:12px;top:76px;z-index:100002;border:0;border-radius:999px;padding:11px 14px;font-weight:900;background:rgba(255,255,255,.92);color:#17406d;box-shadow:0 12px 28px rgba(0,0,0,.18)}
-body.silentMode .silentExit{display:block}
-.lessonProgressWrap{height:10px;border-radius:999px;background:rgba(255,255,255,.18);overflow:hidden;margin:12px 0;border:1px solid var(--line)}
-.lessonProgressFill{height:100%;width:0%;background:linear-gradient(90deg,#fff,#73d7ff,#2f67ff);transition:.4s}
-.friendNote{padding:12px;border-radius:18px;background:rgba(255,255,255,.14);border:1px solid var(--line);margin:8px 0}
-#v71EmergencyOverlay{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:999999;background:radial-gradient(circle at center,#bc1b1b,#210000 72%);color:white;padding:18px;text-align:center;font-family:Arial,Helvetica,sans-serif}
-#v71EmergencyOverlay.show{display:flex}
-#v71EmergencyBox{width:min(470px,100%);border:2px solid rgba(255,255,255,.55);border-radius:30px;padding:24px;background:rgba(0,0,0,.45);box-shadow:0 30px 90px rgba(0,0,0,.75)}
-#v71EmergencyTitle{font-size:30px;font-weight:900;margin-bottom:12px;animation:v71Pulse .85s infinite}
-@keyframes v71Pulse{0%{transform:scale(1);opacity:1}50%{transform:scale(1.035);opacity:.84}100%{transform:scale(1);opacity:1}}
-#v71EmergencyBar{height:20px;border-radius:999px;background:rgba(255,255,255,.2);overflow:hidden;margin:18px 0}
-#v71EmergencyFill{width:0%;height:100%;background:linear-gradient(90deg,#fff,#ffcf33);transition:.25s}
+
+<style id="v8CleanStyle">
+.card{border-radius:24px}
+.app{padding-bottom:105px}
+.cleanHeader{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:8px 0 14px}
+.cleanLogo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:22px}
+.cleanLogoMark{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#55c8ff,#3263ee);color:white}
+.cleanMiniBanner{font-size:13px;font-weight:900;padding:9px 11px;border-radius:999px;background:rgba(255,255,255,.30);border:1px solid var(--line);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:190px}
+.cleanStatus{display:inline-block;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.18);border:1px solid var(--line);font-weight:900;margin:4px 4px 4px 0}
+.todayTimerCircle{width:164px;height:164px;border-radius:50%;margin:16px auto;display:grid;place-items:center;background:conic-gradient(#fff var(--timerAngle,0deg),rgba(255,255,255,.20) 0);box-shadow:inset 0 0 0 6px rgba(255,255,255,.18),0 18px 44px rgba(0,58,122,.22)}
+.todayTimerCircleInner{width:122px;height:122px;border-radius:50%;background:rgba(255,255,255,.88);color:#173963;display:grid;place-items:center;text-align:center;font-weight:900}
+.todayTimerBig{font-size:26px;line-height:1.05}.todayTimerSmall{font-size:12px;opacity:.75;margin-top:4px}
+.cleanNext{padding:12px;border-radius:18px;background:rgba(255,255,255,.14);border:1px solid var(--line);margin-top:10px}
+.cleanSettingsBlock{padding:12px;border-radius:18px;background:rgba(255,255,255,.12);border:1px solid var(--line);margin:10px 0}
+#v8EmergencyOverlay{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:999999;background:radial-gradient(circle at center,#b81b1b,#210000 72%);color:white;padding:18px;text-align:center;font-family:Arial,Helvetica,sans-serif}
+#v8EmergencyOverlay.show{display:flex}
+#v8EmergencyBox{width:min(470px,100%);border:2px solid rgba(255,255,255,.55);border-radius:30px;padding:24px;background:rgba(0,0,0,.45);box-shadow:0 30px 90px rgba(0,0,0,.75)}
+#v8EmergencyTitle{font-size:30px;font-weight:900;margin-bottom:12px}
+#v8EmergencyBar{height:20px;border-radius:999px;background:rgba(255,255,255,.2);overflow:hidden;margin:18px 0}
+#v8EmergencyFill{width:0%;height:100%;background:linear-gradient(90deg,#fff,#ffcf33);transition:.25s}
+@media(max-width:560px){.app{max-width:440px;padding-left:12px;padding-right:12px}.card{padding:16px;border-radius:24px}h1{font-size:29px}h2{font-size:23px}.btn{font-size:17px;padding:14px 15px;border-radius:20px}.lesson{padding:10px;border-radius:18px}.todayTimerCircle{width:142px;height:142px}.todayTimerCircleInner{width:104px;height:104px}.todayTimerBig{font-size:23px}}
 </style>
 
 </head><body>
@@ -186,8 +191,9 @@ body.silentMode .silentExit{display:block}
  <div class="card"><h2>Параллель</h2><div class="gradeGrid" id="gradeGrid"></div></div>
 </section>
 <section id="letters" class="screen"><div class="card"><h2 id="letterTitle">Выбери класс</h2><div class="grid" id="lettersGrid"></div><button class="btn darkBtn" onclick="show('select')">← Назад</button></div></section>
-<section id="main" class="screen"><div class="card"><h1 onclick="logoTap()" id="classTitle">Классный центр</h1><div class="badge" id="version">v7.1 Friendly Fix</div><div class="v62MiniPanel v62Warn"><b>⚡ v6.2 Stability Timer</b><div class="meta">Новый умный отсчёт до уроков: 1 смена, 2 смена, 0 урок и ожидание.</div></div><div class="badge" id="qualityBadge">качество: высокое</div><p class="muted" id="sub">—</p><div class="lesson"><div class="num">🧠</div><div><b>Умный день</b><div class="meta" id="smart">Анализирую...</div></div></div><p class="muted">⚠️ Где есть пометка <b>(не точно!)</b>, исправь через “Изменилось”.</p></div><div class="card"><h2>Меню</h2><div class="grid"><button class="btn" onclick="go('today')">⏱ Сейчас</button><button class="btn orange" onclick="go('tomorrow')">🔮 Завтра</button><button class="btn green" onclick="go('updates')">🛠 Изменилось</button><button class="btn purple" onclick="go('ads')">📢 Творения</button><button class="btn darkBtn" onclick="go('schedule')">📅 Расписание</button><button class="btn darkBtn" onclick="go('settings')">⚙️ Настройки</button></div></div></section>
-<section id="today" class="screen"><div class="card"><h2>Сейчас</h2><p><b id="nowLesson">—</b></p><p class="muted" id="timerText">—</p></div></section>
+<section id="main" class="screen"><div class="card"><h1 onclick="logoTap()" id="classTitle">Классный центр</h1><div class="badge" id="version">v7.1 Friendly Fix</div><div class="v62MiniPanel v62Warn"><b>⚡ v6.2 Stability Timer</b><div class="meta">Новый умный отсчёт до уроков: 1 смена, 2 смена, 0 урок и ожидание.</div></div><div class="badge" id="qualityBadge">качество: высокое</div><p class="muted" id="sub">—</p><div class="lesson"><div class="num">🧠</div><div><b>Умный день</b><div class="meta" id="smart">Анализирую...</div></div></div><p class="muted">⚠️ Пометки <b>(не точно!)</b> можно исправить в “Изменилось”.</p></div><div class="card"><h2>Меню</h2><div class="grid"><button class="btn" onclick="go('today')">⏱ Сейчас</button><button class="btn orange" onclick="go('tomorrow')">🔮 Завтра</button><button class="btn green" onclick="go('updates')">🛠 Изменилось</button><button class="btn purple" onclick="go('ads')">📢 Творения</button><button class="btn darkBtn" onclick="go('schedule')">📅 Расписание</button><button class="btn darkBtn" onclick="go('settings')">⚙️ Настройки</button></div></div></section>
+<section id="today" class="screen"><div class="card"><h2>Сейчас</h2><p><b id="nowLesson">—</b></p><p class="muted" id="timerText">—</p>
+<div class="cleanNext" id="cleanNextLesson">Следующий урок: —</div></div></section>
 <section id="schedule" class="screen"><div class="card"><h2>Расписание</h2><select id="daySelect" onchange="renderSchedule()"></select><div id="scheduleList"></div></div></section>
 <section id="tomorrow" class="screen"><div class="card"><h2>Завтра</h2><div id="tomorrowList"></div></div></section>
 <section id="homework" class="screen"><div class="card"><h2>Домашка</h2><label>Предмет</label><input id="hwSub"><label>Задание</label><textarea id="hwText"></textarea><button class="btn" onclick="addHomework()">Добавить</button><div id="hwList"></div></div></section>
@@ -195,35 +201,8 @@ body.silentMode .silentExit{display:block}
 <section id="ads" class="screen"><div class="card"><h2>📢 Творения</h2><div class="lesson"><div class="num">🎥</div><div><b>Twitch: какойта чел</b><div class="meta">Стримы, игры, проекты.</div></div></div><div class="lesson"><div class="num">🎵</div><div><b>Песни</b><div class="meta">Богдан Кафеев feat DJ Хэнк & Suno.</div></div></div><button class="btn purple" onclick="showAd(true)">Показать рекламу</button></div></section>
 <section id="profile" class="screen"><div class="card"><h2>Профиль</h2><label>Имя</label><input id="userName" onchange="localStorage.setItem('userName',this.value)"><p>Класс: <b id="profileClass">—</b></p><p>Смена: <b id="profileShift">—</b></p></div></section>
 <section id="settings" class="screen"><div class="card"><h2>⚙️ Настройки</h2>
+<div class="cleanSettingsBlock"><b>⚙️ Основные настройки</b><button class="btn darkBtn" onclick="toggleSound()">🔊 Звук: <span id="soundState">вкл</span></button><button class="btn darkBtn" onclick="changeClass()">🎓 Сменить класс</button><button class="btn darkBtn" onclick="togglePerformanceMode()">⚡ Производительность</button><button class="btn darkBtn" onclick="startEmergencyMode()">🚨 Экстренный режим</button></div>
 
-<div class="friendNote">
-  <b>💙 Дружелюбный режим</b>
-  <button class="btn darkBtn" onclick="toggleSilentLessonMode()">🤫 Тихий режим без поломок</button>
-  <button class="btn darkBtn" onclick="checkEmergencySystem()">🚨 Проверить экстренный режим</button>
-  <button class="btn darkBtn" onclick="friendlyDiagnostics()">📋 Диагностика устройства</button>
-</div>
-
-
-<div class="demoPanel">
-  <b>🎤 Выступление</b>
-  <button class="btn darkBtn" onclick="startDemoMode()">🎬 Режим демонстрации</button>
-</div>
-
-
-<div class="securityMini">
-  <b>🛡️ Защита v6.3</b>
-  <button class="btn darkBtn" onclick="toggleSilentLessonMode()">🤫 Тихий урок</button>
-  <button class="btn darkBtn" onclick="searchSubjectToday()">🔍 Найти предмет сегодня</button>
-  <button class="btn darkBtn" onclick="toggleAntiLag()">🔋 Анти-лаг режим</button>
-  <button class="btn darkBtn" onclick="glitchBubble()">🫧 Фраза Пузырька</button>
-  <button class="btn darkBtn" onclick="startEmergencyMode()">⚠️ Экстренный режим</button>
-</div>
-
-
-<div class="v62MiniPanel">
-  <b>📝 Сообщить об ошибке</b>
-  <div class="meta">Скопируй шаблон и отправь в сообщество: класс, день, номер урока, что исправить.</div>
-  <button class="btn darkBtn" onclick="copyBugTemplate()">Скопировать шаблон</button>
 </div>
 
 
@@ -242,15 +221,9 @@ body.silentMode .silentExit{display:block}
   <b>📱 Интерфейс</b>
   <button class="btn darkBtn" onclick="toggleCompact()">📱 Компактный режим: <span id="compactState">выкл</span></button>
 </div>
-<div class="v6Info">
-  <b>🔊 Звуки v6</b>
-  <button class="btn darkBtn" onclick="testSound('nav')">Тест нижнего меню</button>
-  <button class="btn darkBtn" onclick="testSound('settings')">Тест настроек</button>
-  <button class="btn darkBtn" onclick="testSound('ad')">Тест рекламы</button>
-</div>
 <button class="btn darkBtn" onclick="toggleDark()">🌙 Тёмный режим</button><button class="btn darkBtn" onclick="setQuality('low')">⚡ Качество: низкое</button><button class="btn darkBtn" onclick="setQuality('high')">🔥 Качество: высокое</button><button class="btn darkBtn" onclick="toggleSound()">🔊 Звуки: <span id="soundState">вкл</span></button><button class="btn darkBtn" onclick="changeClass()">🎓 Сменить класс</button>
-<button class="btn darkBtn" onclick="dev()">🧪 Разработчик</button><button class="btn darkBtn" onclick="localStorage.clear();location.reload()">🧹 Сброс</button><p class="muted">Уведомления работают не на всех устройствах. Реклама каждые 5 минут.</p></div></section>
-<section id="dev" class="screen"><div class="card"><h1>🧪 Режим разработчика</h1><button class="btn purple" onclick="devTestSystem()">Проверить систему</button><button class="btn darkBtn" onclick="devResetUpdates()">Очистить изменения расписания</button><button class="btn darkBtn" onclick="testSound('settings')">Тест звука</button><button class="btn" onclick="showAd(true)">Тест рекламы</button><button class="btn darkBtn" onclick="devRemoveAds()">Убрать рекламу</button></div></section>
+<p class="muted">Уведомления работают не на всех устройствах. Реклама каждые 5 минут.</p></div></section>
+<section id="dev" class="screen"><div class="card"><h1>🧪 Режим разработчика</h1><button class="btn purple" onclick="devTestSystem()">Проверить систему</button><button class="btn darkBtn" onclick="devResetUpdates()">Очистить изменения расписания</button><button class="btn darkBtn" onclick="devRemoveAds()">Убрать рекламу</button></div></section>
 </div>
 <nav class="nav" id="nav"><button type="button" onclick="go('main')" class="active"><span>🏠</span>Главная</button><button type="button" onclick="go('today')"><span>⏱</span>Сейчас</button><button type="button" onclick="go('schedule')"><span>📅</span>Уроки</button><button type="button" onclick="go('homework')"><span>📘</span>ДЗ</button><button type="button" onclick="go('settings')"><span>⚙️</span>Настройки</button></nav>
 <script>
@@ -310,7 +283,7 @@ return{type:'none',i:-1,remain:0,next:b.findIndex(x=>toMin(x[0])>m)}
 function lname(l){return l?l[0]+(l[1]?' ('+l[1]+')':''):'—'}function renderToday(){if(!cls)return;let l=getLessons(today()),x=currentInfo(today());if(x.type==='before'){nowLesson.textContent='Ожидание начала уроков';timerText.textContent='До начала: '+minText(x.remain)+'. Первый урок: '+lname(l[x.next]);}
 else if(x.type==='lesson'){nowLesson.textContent=lname(l[x.i]);timerText.textContent='До конца: '+minText(x.remain)+'. Далее: '+lname(l[x.next])}
 else if(x.type==='break'){nowLesson.textContent='Перемена';timerText.textContent='До урока: '+minText(x.remain)+'. Далее: '+lname(l[x.next])}
-else{nowLesson.textContent='Уроков сейчас нет';timerText.textContent=l.length?'Уроки ещё не начались или закончились.':'Уроков нет.'}}
+else{nowLesson.textContent='Уроков сейчас нет';timerText.textContent=l.length?'Сейчас уроков нет.':'Уроков нет.'}}
 function renderSchedule(){let d=daySelect.value||today(),l=getLessons(d),b=bells(d),x=d===today()?currentInfo(d):{};scheduleList.innerHTML=l.length?l.map((a,i)=>`<div class="lesson ${x.type==='lesson'&&x.i===i?'current':''}"><div class="num">${i+1}</div><div><b>${a[0]}</b><div class="meta">${b[i]?b[i][0]+' – '+b[i][1]:'—'} • ${a[1]||'кабинет не указан'}</div></div></div>`).join(''):'<div class="lesson">Уроков нет.</div>'}
 function renderTomorrow(){let d=DAYS[(DAYS.indexOf(today())+1)%DAYS.length],l=getLessons(d),b=bells(d);tomorrowList.innerHTML='<h2>'+d+'</h2>'+(l.length?l.map((a,i)=>`<div class="lesson"><div class="num">${i+1}</div><div><b>${a[0]}</b><div class="meta">${b[i]?b[i][0]+' – '+b[i][1]:'—'} • ${a[1]||'—'}</div></div></div>`).join(''):'Уроков нет')}
 function addHomework(){let a=arr('hw');a.unshift({cls,sub:hwSub.value,text:hwText.value});saveArr('hw',a);hwSub.value='';hwText.value='';renderHomework()}function renderHomework(){let a=arr('hw').filter(x=>x.cls===cls);hwList.innerHTML=a.length?a.map(x=>`<div class="lesson"><div><b>${x.sub}</b><div class="meta">${x.text}</div></div></div>`).join(''):'Домашних заданий пока нет.'}
@@ -319,7 +292,7 @@ function smartDay(){if(!cls)return;let n=getLessons(today()).length;smart.textCo
 function showAd(manual=false){let a=ads[Math.floor(Math.random()*ads.length)];adTitle.textContent=a[0];adText.textContent=a[1];ad.classList.add('show');adClose.classList.remove('show');let left=3;adTimer.textContent='Закрыть через '+left;let tm=setInterval(()=>{left--;adTimer.textContent='Закрыть через '+left;if(left<=0){clearInterval(tm);adTimer.textContent='Можно закрыть';adClose.classList.add('show')}},1000)}function closeAd(){ad.classList.remove('show')}
 function toggleDark(){document.body.classList.toggle('dark');localStorage.setItem('darkManual',document.body.classList.contains('dark')?'on':'off')}function setQuality(q){document.body.classList.toggle('low',q==='low');localStorage.setItem('quality',q);qualityBadge.textContent='качество: '+(q==='low'?'низкое':'высокое')}function toggleSound(){let off=localStorage.getItem('soundOff')==='1';localStorage.setItem('soundOff',off?'0':'1');soundState.textContent=off?'вкл':'выкл'}function dev(){let p=prompt('Пароль разработчика');if(p==='030323')go('dev');else if(p!==null)toast('Неверный пароль')}function logoTap(){clicks++;if(clicks>=10){clicks=0;dev()}}
 function renderAll(){renderToday();renderSchedule();renderTomorrow();renderHomework();renderUpdates();smartDay();profileClass.textContent=cls||'—';profileShift.textContent=shift+' смена';soundState.textContent=localStorage.getItem('soundOff')==='1'?'выкл':'вкл'}
-renderStart();userName.value=localStorage.getItem('userName')||'';if(localStorage.getItem('quality')==='low')setQuality('low');if(cls)openMain();tick();setInterval(tick,30000);setTimeout(()=>showAd(false),8000);setInterval(()=>showAd(false),300000);
+renderStart();userName.value=localStorage.getItem('userName')||'';if(localStorage.getItem('quality')==='low')setQuality('low');if(cls)openMain();tick();setInterval(tick,30000);
 
 function changeClass(){
   localStorage.removeItem('class');
@@ -426,422 +399,40 @@ function changeClass(){
 </script>
 
 
-<script id="v62ScriptPatch">
+
+<script id="v8CleanScript">
 (function(){
-  window.copyBugTemplate=function(){
-    const c = localStorage.getItem('class') || 'класс';
-    const text = 'Ошибка в расписании\nКласс: '+c+'\nДень: \nУрок №: \nЧто исправить: ';
-    if(navigator.clipboard){
-      navigator.clipboard.writeText(text).then(function(){
-        if(window.v6Toast) v6Toast('Шаблон скопирован');
-        else alert('Шаблон скопирован');
-      });
-    }else{
-      prompt('Скопируй шаблон:', text);
-    }
-  };
-
-  // Tiny helper: highlight current lesson card a little stronger after render.
-  const oldRenderSchedule = window.renderSchedule;
-  if(typeof oldRenderSchedule === 'function'){
-    window.renderSchedule = function(){
-      oldRenderSchedule();
-      document.querySelectorAll('.lesson.current').forEach(function(el){
-        el.classList.add('v62Pulse');
-      });
-    };
-  }
-})();
-</script>
-
-
-<script id="v63SecurityScript">
-(function(){
-  const CREATOR_NAME="Богдан Кафеев";
-  const CREATOR_TEXT="Создатель: "+CREATOR_NAME;
-  const EMERGENCY_SECONDS=60;
-
-  function toast63(text){
-    if(window.v6Toast) return window.v6Toast(text);
-    const t=document.getElementById("toast");
-    if(t){t.textContent=text;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1700)}
-    else alert(text);
-  }
-
-  function ensureAuthor(){
-    let wm=document.getElementById("authorWatermark");
-    if(!wm){wm=document.createElement("div");wm.id="authorWatermark";document.body.appendChild(wm)}
-    wm.textContent=CREATOR_TEXT;
-    let credit=document.getElementById("authorCredit");
-    if(!credit){
-      const settings=document.getElementById("settings");
-      const card=settings?settings.querySelector(".card"):null;
-      if(card){credit=document.createElement("div");credit.id="authorCredit";card.appendChild(credit)}
-    }
-    if(credit) credit.textContent=CREATOR_TEXT+" • v7.1 Friendly Fix";
-    try{localStorage.setItem("creatorName",CREATOR_NAME);localStorage.setItem("creatorCredit",CREATOR_TEXT)}catch(e){}
-  }
-
-  window.toggleSilentLessonMode=function(){
-    document.body.classList.toggle("silentMode");
-    toast63(document.body.classList.contains("silentMode")?"Тихий урок включён":"Тихий урок выключен");
-  };
-
-  window.searchSubjectToday=function(){
-    const q=prompt("Какой предмет найти сегодня?");
-    if(!q) return;
-    try{
-      const lessons=getLessons(today());
-      const found=[];
-      lessons.forEach((l,i)=>{if((l[0]||"").toLowerCase().includes(q.toLowerCase())) found.push((i+1)+". "+l[0]+" "+(l[1]||""))});
-      alert(found.length?found.join("\n"):"Сегодня не найдено");
-    }catch(e){alert("Поиск недоступен")}
-  };
-
-  window.toggleAntiLag=function(){
-    document.body.classList.toggle("low");
-    document.body.classList.add("compact");
-    toast63("Анти-лаг режим переключён");
-  };
-
-  window.glitchBubble=function(){
-    const phrases=[
-      "🫧 Пузырёк: расписание смотрит обратно...",
-      "🫧 Пузырёк: кабинет найден, но он не уверен...",
-      "🫧 Пузырёк: система стабильна. Почти.",
-      "🫧 Пузырёк: если урок исчез, значит он спрятался."
-    ];
-    toast63(phrases[Math.floor(Math.random()*phrases.length)]);
-  };
-
-  function sirenTick(){
-    if(localStorage.getItem("soundOff")==="1") return;
-    try{
-      const ctx=new (window.AudioContext||window.webkitAudioContext)();
-      const o=ctx.createOscillator();
-      const g=ctx.createGain();
-      o.type="sawtooth";
-      o.frequency.setValueAtTime(520,ctx.currentTime);
-      o.frequency.linearRampToValueAtTime(880,ctx.currentTime+.35);
-      o.frequency.linearRampToValueAtTime(520,ctx.currentTime+.7);
-      g.gain.value=.035;
-      o.connect(g);g.connect(ctx.destination);
-      o.start();o.stop(ctx.currentTime+.72);
-    }catch(e){}
-  }
-
-  window.startEmergencyMode=function(){
-    const answer=prompt("Экстренный режим очистит данные приложения. Чтобы подтвердить, напиши: да");
-    if(answer!=="да"){toast63("Отмена. Нужно написать именно: да");return}
-    const overlay=document.getElementById("emergencyOverlay");
-    const fill=document.getElementById("emergencyFill");
-    const text=document.getElementById("emergencyText");
-    if(!overlay||!fill||!text) return;
-    overlay.classList.add("show");
-    document.body.style.pointerEvents="none";
-    overlay.style.pointerEvents="auto";
-    let left=EMERGENCY_SECONDS, passed=0;
-    text.textContent="Очистка через "+left+" сек.";
-    fill.style.width="0%";
-    sirenTick();
-    const timer=setInterval(()=>{
-      left--;passed++;
-      fill.style.width=Math.min(100,Math.round(passed/EMERGENCY_SECONDS*100))+"%";
-      text.textContent="Очистка через "+left+" сек.";
-      if(left%3===0) sirenTick();
-      if(left<=0){
-        clearInterval(timer);
-        text.textContent="Кэш очищается...";
-        try{
-          const keepTheme=localStorage.getItem("asosh_theme_v6");
-          localStorage.clear();
-          if(keepTheme) localStorage.setItem("asosh_theme_v6",keepTheme);
-          localStorage.setItem("creatorName",CREATOR_NAME);
-          localStorage.setItem("creatorCredit",CREATOR_TEXT);
-        }catch(e){}
-        setTimeout(()=>location.reload(),900);
-      }
-    },1000);
-  };
-
-  window.devRemoveAds=function(){
-    try{localStorage.setItem("creatorAdsOff","1");localStorage.setItem("adsOff","1")}catch(e){}
-    toast63("Реклама убрана через режим разработчика");
-  };
-
-  ensureAuthor();
-  setInterval(ensureAuthor,2500);
-  console.log(CREATOR_TEXT);
-})();
-</script>
-
-
-<script id="emergencyFix631Script">
-(function(){
-  function miniToast(text){
-    const t=document.getElementById("toast") || document.getElementById("v6Toast");
-    if(t){
-      t.textContent=text;
-      t.classList.add("show");
-      setTimeout(function(){t.classList.remove("show")},1700);
-    }else alert(text);
-  }
-
-  function siren(){
-    if(localStorage.getItem("soundOff")==="1") return;
-    try{
-      const ctx=new (window.AudioContext||window.webkitAudioContext)();
-      const o=ctx.createOscillator();
-      const g=ctx.createGain();
-      o.type="sawtooth";
-      o.frequency.setValueAtTime(520,ctx.currentTime);
-      o.frequency.linearRampToValueAtTime(920,ctx.currentTime+.35);
-      o.frequency.linearRampToValueAtTime(520,ctx.currentTime+.7);
-      g.gain.value=.04;
-      o.connect(g);
-      g.connect(ctx.destination);
-      o.start();
-      o.stop(ctx.currentTime+.72);
-    }catch(e){}
-  }
-
-  window.startEmergencyMode=function(){
-    const answer=prompt("Экстренный режим очистит кэш приложения. Напиши да");
-    if(answer!=="да"){
-      miniToast("Нужно написать именно: да");
-      return;
-    }
-
-    const overlay=document.getElementById("emergencyOverlayFix");
-    const fill=document.getElementById("emergencyFillFix");
-    const text=document.getElementById("emergencyTextFix");
-
-    if(!overlay || !fill || !text){
-      alert("Ошибка: экран экстренного режима не найден");
-      return;
-    }
-
-    overlay.classList.add("show");
-    overlay.style.display="flex";
-    document.querySelectorAll("button,input,select,textarea").forEach(function(el){
-      if(!overlay.contains(el)) el.disabled=true;
-    });
-
-    let total=60;
-    let left=total;
-    fill.style.width="0%";
-    text.textContent="Очистка через "+left+" сек.";
-    siren();
-
-    const timer=setInterval(function(){
-      left--;
-      const percent=Math.round((total-left)/total*100);
-      fill.style.width=percent+"%";
-      text.textContent="Очистка через "+left+" сек.";
-      if(left%3===0) siren();
-
-      if(left<=0){
-        clearInterval(timer);
-        text.textContent="Кэш очищается...";
-        try{
-          const creatorName=localStorage.getItem("creatorName") || "Богдан Кафеев";
-          const creatorCredit=localStorage.getItem("creatorCredit") || "Создатель: Богдан Кафеев";
-          localStorage.clear();
-          localStorage.setItem("creatorName",creatorName);
-          localStorage.setItem("creatorCredit",creatorCredit);
-        }catch(e){}
-        setTimeout(function(){ location.reload(); },900);
-      }
-    },1000);
-  };
-
-  // На всякий случай заменяем текст версии
-  const version=document.getElementById("version");
-  if(version) version.textContent="v7.1 Friendly Fix";
-})();
-</script>
-
-
-<script id="v7DemoShowScript">
-(function(){
-  function toast7(text){
-    if(window.v6Toast) return window.v6Toast(text);
-    const t=document.getElementById("toast");
-    if(t){t.textContent=text;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1700)}
-    else alert(text);
-  }
-  function siren7(){
-    if(localStorage.getItem("soundOff")==="1") return;
-    try{
-      const ctx=new (window.AudioContext||window.webkitAudioContext)();
-      const o=ctx.createOscillator(); const g=ctx.createGain();
-      o.type="sawtooth";
-      o.frequency.setValueAtTime(520,ctx.currentTime);
-      o.frequency.linearRampToValueAtTime(920,ctx.currentTime+.35);
-      o.frequency.linearRampToValueAtTime(520,ctx.currentTime+.7);
-      g.gain.value=.04; o.connect(g); g.connect(ctx.destination);
-      o.start(); o.stop(ctx.currentTime+.72);
-    }catch(e){}
-  }
-  window.startEmergencyMode=function(){
-    const answer=prompt("Экстренный режим очистит кэш приложения. Напиши: да");
-    if(answer!=="да"){toast7("Нужно написать именно: да");return;}
-    let overlay=document.getElementById("v7EmergencyOverlay");
-    let fill=document.getElementById("v7EmergencyFill");
-    let text=document.getElementById("v7EmergencyText");
-    if(!overlay){
-      overlay=document.createElement("div");
-      overlay.id="v7EmergencyOverlay";
-      overlay.innerHTML='<div id="v7EmergencyBox"><div id="v7EmergencyTitle">⚠️ ЭКСТРЕННЫЙ РЕЖИМ</div><p>Система заблокирована. Идёт очистка данных приложения.</p><div id="v7EmergencyBar"><div id="v7EmergencyFill"></div></div><div id="v7EmergencyText">Подготовка...</div></div>';
-      document.body.appendChild(overlay);
-      fill=document.getElementById("v7EmergencyFill");
-      text=document.getElementById("v7EmergencyText");
-    }
-    overlay.classList.add("show"); overlay.style.display="flex";
-    document.querySelectorAll("button,input,select,textarea").forEach(function(el){if(!overlay.contains(el)) el.disabled=true;});
-    const total=60; let left=total;
-    fill.style.width="0%"; text.textContent="Очистка через "+left+" сек."; siren7();
-    const timer=setInterval(function(){
-      left--;
-      fill.style.width=Math.round((total-left)/total*100)+"%";
-      text.textContent="Очистка через "+left+" сек.";
-      if(left%3===0) siren7();
-      if(left<=0){
-        clearInterval(timer); text.textContent="Кэш очищается...";
-        try{
-          const creatorName=localStorage.getItem("creatorName")||"Богдан Кафеев";
-          const creatorCredit=localStorage.getItem("creatorCredit")||"Создатель: Богдан Кафеев";
-          localStorage.clear();
-          localStorage.setItem("creatorName",creatorName);
-          localStorage.setItem("creatorCredit",creatorCredit);
-        }catch(e){}
-        setTimeout(function(){location.reload()},900);
-      }
-    },1000);
-  };
-  function minText7(n){
-    n=Math.max(0,n||0); const h=Math.floor(n/60),m=n%60;
-    if(h&&m) return h+" ч "+m+" мин"; if(h) return h+" ч"; return m+" мин";
-  }
-  function setTodayCircle(label,big,angle){
-    const c=document.getElementById("todayTimerCircle"), b=document.getElementById("todayTimerBig"), s=document.getElementById("todayTimerSmall");
-    if(c) c.style.setProperty("--timerAngle",angle+"deg");
-    if(b) b.textContent=big;
-    if(s) s.textContent=label;
-  }
-  window.renderToday=function(){
-    if(typeof cls==="undefined"||!cls) return;
-    const day=typeof today==="function"?today():"";
-    const l=typeof getLessons==="function"?getLessons(day):[];
-    const x=typeof currentInfo==="function"?currentInfo(day):{type:"none"};
-    function lname7(lesson){return lesson?lesson[0]+(lesson[1]?" ("+lesson[1]+")":""):"—";}
-    const nowLessonEl=document.getElementById("nowLesson"), timerTextEl=document.getElementById("timerText");
-    if(x.type==="before"){
-      if(nowLessonEl) nowLessonEl.textContent="Ожидание начала уроков";
-      if(timerTextEl) timerTextEl.textContent="До начала: "+minText7(x.remain)+". Первый урок: "+lname7(l[x.next]);
-      setTodayCircle("до начала",minText7(x.remain),60);
-    }else if(x.type==="lesson"){
-      if(nowLessonEl) nowLessonEl.textContent=lname7(l[x.i]);
-      if(timerTextEl) timerTextEl.textContent="До конца: "+minText7(x.remain)+". Далее: "+lname7(l[x.next]);
-      setTodayCircle("до конца",minText7(x.remain),Math.max(20,Math.min(360,360-(x.remain||0)*6)));
-    }else if(x.type==="break"){
-      if(nowLessonEl) nowLessonEl.textContent="Перемена";
-      if(timerTextEl) timerTextEl.textContent="До урока: "+minText7(x.remain)+". Далее: "+lname7(l[x.next]);
-      setTodayCircle("до урока",minText7(x.remain),180);
-    }else{
-      if(nowLessonEl) nowLessonEl.textContent="Уроков сейчас нет";
-      if(timerTextEl) timerTextEl.textContent=l.length?"Уроки ещё не начались или закончились.":"Уроков нет.";
-      setTodayCircle("сейчас","—",0);
-    }
-  };
-  window.startDemoMode=function(){
-    toast7("Демо-режим включён 🎤");
-    try{
-      if(typeof chooseShift==="function") chooseShift("2");
-      if(typeof cls!=="undefined"&&!cls){cls="5Б";localStorage.setItem("class",cls);}
-      if(typeof go==="function") go("main");
-      setTimeout(function(){if(typeof renderToday==="function")renderToday();},300);
-    }catch(e){}
-  };
-  const version=document.getElementById("version");
-  if(version) version.textContent="v7.1 Friendly Fix";
-})();
-</script>
-
-
-<script id="v71FriendlyFixScript">
-(function(){
-function friendlyToast(text){
- if(window.v6Toast) return window.v6Toast(text);
- const t=document.getElementById("toast");
- if(t){t.textContent=text;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1900)}
- else alert(text);
-}
-window.toggleSilentLessonMode=function(){
- const enabled=!document.body.classList.contains("silentMode");
- document.body.classList.toggle("silentMode",enabled);
- try{localStorage.setItem("silentMode",enabled?"1":"0")}catch(e){}
- friendlyToast(enabled?"🤫 Тихий режим включён":"🔊 Тихий режим выключен");
- const status=document.getElementById("friendlyStatus");
- if(status) status.textContent=enabled?"🤫 Тихо. Оставляем только самое нужное.":"💙 Всё хорошо. Приложение следит за временем уроков.";
+const banners=["🎥 Twitch: kakoitachel","🎵 Песни автора","🚀 Обновление v8","📢 GitHub версия"];
+let bi=0;
+function banner(){const b=document.getElementById("cleanMiniBanner");if(b){b.textContent=banners[bi%banners.length];bi++;}}
+banner();setInterval(banner,10000);
+function toast8(t){if(window.v6Toast)return window.v6Toast(t);const e=document.getElementById("toast");if(e){e.textContent=t;e.classList.add("show");setTimeout(()=>e.classList.remove("show"),1700)}else alert(t)}
+window.togglePerformanceMode=function(){document.body.classList.toggle("low");document.body.classList.toggle("compact",true);toast8("Производительность переключена")};
+window.changeClass=function(){localStorage.removeItem("class");if(typeof show==="function")show("select");toast8("Выбери класс")};
+function mt(n){n=Math.max(0,n||0);const h=Math.floor(n/60),m=n%60;if(h&&m)return h+" ч "+m+" мин";if(h)return h+" ч";return m+" мин"}
+function circle(label,big,ang){const c=document.getElementById("todayTimerCircle"),b=document.getElementById("todayTimerBig"),s=document.getElementById("todayTimerSmall");if(c)c.style.setProperty("--timerAngle",ang+"deg");if(b)b.textContent=big;if(s)s.textContent=label}
+window.renderToday=function(){
+ if(typeof cls==="undefined"||!cls)return;
+ const day=typeof today==="function"?today():"";
+ const l=typeof getLessons==="function"?getLessons(day):[];
+ const x=typeof currentInfo==="function"?currentInfo(day):{type:"none"};
+ const name=a=>a?a[0]+(a[1]?" ("+a[1]+")":""):"—";
+ const n=document.getElementById("nowLesson"),t=document.getElementById("timerText"),nx=document.getElementById("cleanNextLesson");
+ if(x.type==="before"){if(n)n.textContent="Ожидание уроков";if(t)t.textContent="До начала: "+mt(x.remain);if(nx)nx.textContent="Первый урок: "+name(l[x.next]);circle("до начала",mt(x.remain),70)}
+ else if(x.type==="lesson"){if(n)n.textContent=name(l[x.i]);if(t)t.textContent="До конца: "+mt(x.remain);if(nx)nx.textContent="Далее: "+name(l[x.next]);circle("до конца",mt(x.remain),Math.max(20,Math.min(360,360-(x.remain||0)*6)))}
+ else if(x.type==="break"){if(n)n.textContent="Перемена";if(t)t.textContent="До урока: "+mt(x.remain);if(nx)nx.textContent="Далее: "+name(l[x.next]);circle("до урока",mt(x.remain),180)}
+ else{if(n)n.textContent="Уроков сейчас нет";if(t)t.textContent="Сейчас уроков нет.";if(nx)nx.textContent=l.length?"Расписание на сегодня загружено":"Сегодня уроков нет";circle("сейчас","—",0)}
 };
-try{if(localStorage.getItem("silentMode")==="1")document.body.classList.add("silentMode")}catch(e){}
-function sirenSoft(){
- if(localStorage.getItem("soundOff")==="1") return;
- try{
-  const ctx=new (window.AudioContext||window.webkitAudioContext)();
-  const o=ctx.createOscillator(),g=ctx.createGain();
-  o.type="sawtooth";
-  o.frequency.setValueAtTime(440,ctx.currentTime);
-  o.frequency.linearRampToValueAtTime(780,ctx.currentTime+.32);
-  o.frequency.linearRampToValueAtTime(440,ctx.currentTime+.65);
-  g.gain.value=.032;o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+.68);
- }catch(e){}
-}
+function siren(){if(localStorage.getItem("soundOff")==="1")return;try{const ctx=new (window.AudioContext||window.webkitAudioContext)(),o=ctx.createOscillator(),g=ctx.createGain();o.type="sawtooth";o.frequency.setValueAtTime(440,ctx.currentTime);o.frequency.linearRampToValueAtTime(780,ctx.currentTime+.35);o.frequency.linearRampToValueAtTime(440,ctx.currentTime+.70);g.gain.value=.032;o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+.72)}catch(e){}}
 window.startEmergencyMode=function(){
- const answer=prompt("Экстренный режим очистит временные данные. Напиши: да");
- if(answer!=="да"){friendlyToast("Отменено. Нужно написать: да");return}
- let overlay=document.getElementById("v71EmergencyOverlay"),fill=document.getElementById("v71EmergencyFill"),text=document.getElementById("v71EmergencyText");
- if(!overlay){
-  overlay=document.createElement("div");overlay.id="v71EmergencyOverlay";
-  overlay.innerHTML='<div id="v71EmergencyBox"><div id="v71EmergencyTitle">⚠️ Экстренный режим</div><p>Приложение очищает временные данные.</p><div id="v71EmergencyBar"><div id="v71EmergencyFill"></div></div><div id="v71EmergencyText">Подготовка...</div></div>';
-  document.body.appendChild(overlay);fill=document.getElementById("v71EmergencyFill");text=document.getElementById("v71EmergencyText");
- }
- overlay.classList.add("show");overlay.style.display="flex";
- document.querySelectorAll("button,input,select,textarea").forEach(function(el){if(!overlay.contains(el))el.disabled=true});
- const total=60;let left=total;fill.style.width="0%";text.textContent="Очистка через "+left+" сек.";sirenSoft();
- const timer=setInterval(function(){
-  left--;fill.style.width=Math.round((total-left)/total*100)+"%";text.textContent="Очистка через "+left+" сек.";
-  if(left%4===0)sirenSoft();
-  if(left<=0){
-   clearInterval(timer);text.textContent="Готово. Перезапуск...";
-   try{const cn=localStorage.getItem("creatorName")||"Богдан Кафеев";const cc=localStorage.getItem("creatorCredit")||"Создатель: Богдан Кафеев";localStorage.clear();localStorage.setItem("creatorName",cn);localStorage.setItem("creatorCredit",cc)}catch(e){}
-   setTimeout(function(){location.reload()},900);
-  }
- },1000);
+ const a=prompt("Экстренный режим очистит временные данные. Напиши: да");if(a!=="да"){toast8("Отменено");return}
+ let o=document.getElementById("v8EmergencyOverlay"),f=document.getElementById("v8EmergencyFill"),tx=document.getElementById("v8EmergencyText");
+ if(!o){o=document.createElement("div");o.id="v8EmergencyOverlay";o.innerHTML='<div id="v8EmergencyBox"><div id="v8EmergencyTitle">⚠️ Экстренный режим</div><p>Приложение очистит временные данные и перезапустится.</p><div id="v8EmergencyBar"><div id="v8EmergencyFill"></div></div><div id="v8EmergencyText">Подготовка...</div></div>';document.body.appendChild(o);f=document.getElementById("v8EmergencyFill");tx=document.getElementById("v8EmergencyText")}
+ o.classList.add("show");o.style.display="flex";let total=30,left=total;f.style.width="0%";tx.textContent="Очистка через "+left+" сек.";siren();
+ const timer=setInterval(()=>{left--;f.style.width=Math.round((total-left)/total*100)+"%";tx.textContent="Очистка через "+left+" сек.";if(left%4===0)siren();if(left<=0){clearInterval(timer);tx.textContent="Готово. Перезапуск...";try{const cn=localStorage.getItem("creatorName")||"Богдан Кафеев",cc=localStorage.getItem("creatorCredit")||"Создатель: Богдан Кафеев";localStorage.clear();localStorage.setItem("creatorName",cn);localStorage.setItem("creatorCredit",cc)}catch(e){}setTimeout(()=>location.reload(),900)}},1000)
 };
-window.checkEmergencySystem=function(){friendlyToast(document.getElementById("v71EmergencyOverlay")?"🚨 Экстренный экран найден. Всё готово.":"⚠️ Экстренный экран будет создан автоматически.")};
-window.friendlyDiagnostics=function(){
- const info=["Диагностика приложения:","Версия: v7.1 Friendly Fix","Класс: "+(localStorage.getItem("class")||"не выбран"),"Устройство: "+(navigator.userAgent||"неизвестно").slice(0,80),"Ядер CPU: "+(navigator.hardwareConcurrency||"неизвестно"),"Онлайн: "+(navigator.onLine?"да":"нет")].join("\n");
- if(navigator.clipboard)navigator.clipboard.writeText(info).then(function(){friendlyToast("📋 Диагностика скопирована")});else alert(info);
-};
-function patchProgress(){
- try{
-  const day=typeof today==="function"?today():"";
-  const x=typeof currentInfo==="function"?currentInfo(day):{type:"none"};
-  const fill=document.getElementById("lessonProgressFill"),status=document.getElementById("friendlyStatus");
-  if(!fill)return;let pct=0;
-  if(x.type==="lesson"){pct=Math.max(5,Math.min(100,100-(x.remain||0)/40*100));if(status)status.textContent="⏱ Идёт урок. Таймер показывает, сколько осталось."}
-  else if(x.type==="break"){pct=55;if(status)status.textContent="🔔 Сейчас перемена. Скоро следующий урок."}
-  else if(x.type==="before"){pct=25;if(status)status.textContent="🕒 Уроки скоро начнутся."}
-  else{pct=0;if(status)status.textContent="💙 Сейчас активного урока нет."}
-  fill.style.width=pct+"%";
- }catch(e){}
-}
-const oldRenderToday=window.renderToday;
-if(typeof oldRenderToday==="function"){window.renderToday=function(){oldRenderToday();patchProgress()}}
-setInterval(patchProgress,30000);
-setTimeout(function(){patchProgress();const v=document.getElementById("version");if(v)v.textContent="v7.1 Friendly Fix"},700);
+window.showAd=function(){toast8("📢 "+banners[bi%banners.length]);banner()};
+setTimeout(()=>{const v=document.getElementById("version");if(v){v.textContent="v8 Clean";v.className="cleanStatus"};if(typeof renderToday==="function")renderToday()},600);
 })();
 </script>
 
